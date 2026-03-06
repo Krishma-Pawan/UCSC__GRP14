@@ -1,0 +1,153 @@
+                                                                                            │    
+│   1 <!DOCTYPE html>                                                                           │    
+│   2 <html lang="en">                                                                          │    
+│   3 <head>                                                                                    │    
+│   4     <meta charset="UTF-8">                                                                │    
+│   5     <meta name="viewport" content="width=device-width, initial-scale=1.0">                │    
+│   6     <title>Student Profile Card</title>                                                   │    
+│   7     <!-- Google Fonts: Poppins -->                                                        │    
+│   8     <link rel="preconnect" href="https://fonts.googleapis.com">                           │    
+│   9     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                  │    
+│  10     <link                                                                                 │    
+│     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"     │    
+│     rel="stylesheet">                                                                         │    
+│  11     <style>                                                                               │    
+│  12         :root {                                                                           │    
+│  13             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);        │    
+│  14             --card-bg: #ffffff;                                                           │    
+│  15             --text-main: #2d3436;                                                         │    
+│  16             --text-secondary: #636e72;                                                    │    
+│  17             --accent: #6c5ce7;                                                            │    
+│  18         }                                                                                 │    
+│  19                                                                                           │    
+│  20         * {                                                                               │    
+│  21             margin: 0;                                                                    │    
+│  22             padding: 0;                                                                   │    
+│  23             box-sizing: border-box;                                                       │    
+│  24         }                                                                                 │    
+│  25                                                                                           │    
+│  26         body {                                                                            │    
+│  27             font-family: 'Poppins', sans-serif;                                           │    
+│  28             background: var(--primary-gradient);                                          │    
+│  29             min-height: 100vh;                                                            │    
+│  30             display: flex;                                                                │    
+│  31             justify-content: center;                                                      │    
+│  32             align-items: center;                                                          │    
+│  33             padding: 20px;                                                                │    
+│  34         }                                                                                 │    
+│  35                                                                                           │    
+│  36         .profile-card {                                                                   │    
+│  37             background: var(--card-bg);                                                   │    
+│  38             width: 100%;                                                                  │    
+│  39             max-width: 350px;                                                             │    
+│  40             border-radius: 20px;                                                          │    
+│  41             overflow: hidden;                                                             │    
+│  42             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);                                   │    
+│  43             transition: transform 0.3s ease;                                              │    
+│  44             text-align: center;                                                           │    
+│  45         }                                                                                 │    
+│  46                                                                                           │    
+│  47         .profile-card:hover {                                                             │    
+│  48             transform: translateY(-10px);                                                 │    
+│  49         }                                                                                 │    
+│  50                                                                                           │    
+│  51         .card-header {                                                                    │    
+│  52             height: 120px;                                                                │    
+│  53             background: var(--primary-gradient);                                          │    
+│  54             position: relative;                                                           │    
+│  55         }                                                                                 │    
+│  56                                                                                           │    
+│  57         .image-container {                                                                │    
+│  58             width: 110px;                                                                 │    
+│  59             height: 110px;                                                                │    
+│  60             border-radius: 50%;                                                           │    
+│  61             border: 5px solid #fff;                                                       │    
+│  62             position: absolute;                                                           │    
+│  63             bottom: -55px;                                                                │    
+│  64             left: 50%;                                                                    │    
+│  65             transform: translateX(-50%);                                                  │    
+│  66             overflow: hidden;                                                             │    
+│  67             background: #eee;                                                             │    
+│  68         }                                                                                 │    
+│  69                                                                                           │    
+│  70         .image-container img {                                                            │    
+│  71             width: 100%;                                                                  │    
+│  72             height: 100%;                                                                 │    
+│  73             object-fit: cover;                                                            │    
+│  74         }                                                                                 │    
+│  75                                                                                           │    
+│  76         .card-content {                                                                   │    
+│  77             padding: 70px 30px 40px;                                                      │    
+│  78         }                                                                                 │    
+│  79                                                                                           │    
+│  80         .student-name {                                                                   │    
+│  81             font-size: 1.5rem;                                                            │    
+│  82             font-weight: 600;                                                             │    
+│  83             color: var(--text-main);                                                      │    
+│  84             margin-bottom: 5px;                                                           │    
+│  85         }                                                                                 │    
+│  86                                                                                           │    
+│  87         .student-stream {                                                                 │    
+│  88             font-size: 0.9rem;                                                            │    
+│  89             color: var(--accent);                                                         │    
+│  90             font-weight: 400;                                                             │    
+│  91             text-transform: uppercase;                                                    │    
+│  92             letter-spacing: 1px;                                                          │    
+│  93             margin-bottom: 15px;                                                          │    
+│  94             display: block;                                                               │    
+│  95         }                                                                                 │    
+│  96                                                                                           │    
+│  97         .student-bio {                                                                    │    
+│  98             font-size: 0.95rem;                                                           │    
+│  99             color: var(--text-secondary);                                                 │    
+│ 100             line-height: 1.6;                                                             │    
+│ 101             margin-bottom: 25px;                                                          │    
+│ 102         }                                                                                 │    
+│ 103                                                                                           │    
+│ 104         .social-links {                                                                   │    
+│ 105             display: flex;                                                                │    
+│ 106             justify-content: center;                                                      │    
+│ 107             gap: 15px;                                                                    │    
+│ 108         }                                                                                 │    
+│ 109                                                                                           │    
+│ 110         .btn {                                                                            │    
+│ 111             padding: 10px 25px;                                                           │    
+│ 112             background: var(--primary-gradient);                                          │    
+│ 113             color: white;                                                                 │    
+│ 114             border: none;                                                                 │    
+│ 115             border-radius: 25px;                                                          │    
+│ 116             font-size: 0.9rem;                                                            │    
+│ 117             cursor: pointer;                                                              │    
+│ 118             text-decoration: none;                                                        │    
+│ 119             transition: opacity 0.3s;                                                     │    
+│ 120         }                                                                                 │    
+│ 121                                                                                           │    
+│ 122         .btn:hover {                                                                      │    
+│ 123             opacity: 0.9;                                                                 │    
+│ 124         }                                                                                 │    
+│ 125     </style>                                                                              │    
+│ 126 </head>                                                                                   │    
+│ 127 <body>                                                                                    │    
+│ 128                                                                                           │    
+│ 129     <div class="profile-card">                                                            │    
+│ 130         <div class="card-header">                                                         │    
+│ 131             <div class="image-container">                                                 │    
+│ 132                 <!-- Profile Image Placeholder -->                                        │    
+│ 133                 <img src="https://i.pravatar.cc/150?u=student" alt="Student Profile">     │    
+│ 134             </div>                                                                        │    
+│ 135         </div>                                                                            │    
+│ 136         <div class="card-content">                                                        │    
+│ 137             <h1 class="student-name">Alex Rivera</h1>                                     │    
+│ 138             <span class="student-stream">Computer Science & Engineering</span>            │    
+│ 139             <p class="student-bio">                                                       │    
+│ 140                 Passionate developer and tech enthusiast. Currently exploring the worlds  │    
+│     of UI/UX design and cloud computing. Always learning, always building.                    │    
+│ 141             </p>                                                                          │    
+│ 142             <div class="social-links">                                                    │    
+│ 143                 <a href="#" class="btn">View Portfolio</a>                                │    
+│ 144             </div>                                                                        │    
+│ 145         </div>                                                                            │    
+│ 146     </div>                                                                                │    
+│ 147                                                                                           │    
+│ 148 </body>                                                                                   │    
+│ 149 </html>   
